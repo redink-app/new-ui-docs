@@ -286,4 +286,69 @@ Each array is used with different components. `assessmentData` is mapped with `<
 
 `<HeadTr />`, `<Mark />`, `<Profile />` are just ui components.
 
-Other components explained in detail in seperated docs. see `./Gradebook` folder.
+
+### MarkInput 
+![Gradebook cell](../img/Components.png)
+
+Props are self explanatory as the name suggest. `i` and `j` are the props which represent the placement in the table cell.
+
+```js
+  const [final, setFinal] = useState(markingSystem === "0" ? Number(mark) : mark)
+```
+
+We will render different input boxes based on the requirement. 
+- If `final` === -1 (number) then => `PointInputBox`.
+- If `final` === -1 (number) and `convertTo` > 0 then => `ConvertToPointBox`.
+- If `final` === -1 (text) then => `GradeInputBox`.
+- If `final` is not -1, then we will show the colored mark boxes.
+
+
+```js
+  // input value of the input box
+  const [val, setVal] = useState(
+    stuTestStatus === "1"
+      ? "ab"
+      : mark === "-1"
+        ? ""
+        : markingSystem === "0"
+          ? convertTo > 0
+            ? Number(Number(Number(mark) * (total / convertTo)).toFixed())
+            : Number(mark)
+          : mark
+  )
+```
+
+Other functions explanations,
+```js
+  // number input updater
+  const onChangeByPoint = () => {}
+
+  // grade letter input updater
+  const onChangeByGrade = () => {}
+
+  // check the input is valid to be enter as mark
+  const canProceed = () => {}
+
+  // onBlur -> fires on on blur of every input type. will make backend call only when the value changes.
+  const onBlur = () => {}
+
+  // onEnter -> fires when user pressed enter key
+  const onEnter = () => {}
+
+  // fires when onclicking the cell
+  const onReEnter = () => {}
+
+  // set the cell to be in focus
+  const stayFocus = () => {}
+
+  // on submiting, flag icon input (updating test status)
+  const onFlagOptionClk = () => {}
+
+  // on making comment for the cell
+  const makePost = () => {}
+```
+
+`PointInputBox` , `ConvertToPointBox`, `GradeInputBox` are all same in logical wise which are used to update the input box and if the value is not fit to our condition then will fire error popup. In throughout our application `react-aria` is used `GradeInputBox` for select like input box. `PointInputBox` , `ConvertToPointBox`, `CommentBox`, `TestStatusBox` are using `@floating-ui/react-dom-interactions` library for placing the error popups. Infact most of the places we use `@floating-ui/react-dom-interactions` library. It is advised to learn this library before start working on.
+
+
+
