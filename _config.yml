@@ -1,0 +1,15 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - folder-structure.md
+  - pages.md
+  - UIcomp.md
+  - ./teacher/pages.md
+  - ./teacher/Concept.md
+  - ./teacher/Gradescale.md
+  - ./teacher/Gradebook.md
+  
