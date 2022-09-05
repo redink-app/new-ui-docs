@@ -1,4 +1,15 @@
-# new-ui-docs
-documentation for the new redink frontend
+Follow the following structure to read the docs. (Its not mandatory)
 
-check
+#### Independent
+  - `UIcopm.md`
+
+#### Flow wise structure
+Starting
+  - `folder-structure.md`
+  - `pages.md`
+
+Teacher
+  - `pages.md`
+  - `Concept.md`
+  - `Gradescale.md`
+  - `Gradebook.md`
