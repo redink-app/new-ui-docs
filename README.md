@@ -12,4 +12,4 @@ Teacher
   - `Gradebook.md` [&#x1F517;](https://redink-app.github.io/new-ui-docs/teacher/Gradebook)
 
 #### Independent
-  - `UIcopm.md` [&#x1F517;](https://redink-app.github.io/new-ui-docs/UIcopm)
+  - `UIcomp.md` [&#x1F517;](https://redink-app.github.io/new-ui-docs/UIcomp)
