@@ -1,8 +1,4 @@
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
+theme: jekyll-theme-minimal
 include:
   - README.md
   - folder-structure.md
